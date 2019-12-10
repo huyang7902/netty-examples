@@ -1,0 +1,12 @@
+.idea/
+*.iml
+target/
+*.pyc
+out/
+.classpath
+.project
+.settings/
+*/WEB-INF/lib
+$*
+
+src/main/resources/rebel.xml

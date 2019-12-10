@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option java_package = "com.hy.netty.protobuf";
+option java_outer_classname = "MyDataInfo";
+
+message MyMessage {
+    enum DataType {
+        PersonType = 0;
+        DogType = 1;
+        CatType = 2;
+    }
+
+    DataType data_type = 1;//必须有一个枚举属性
+
+    oneof dataBody {
+        Person person = 2;
+        Dog dog = 3;
+        Cat cat = 4;
+    }
+
+}
+
+message Person {
+    string name = 1;
+    int32 age = 2;
+    string adress = 3;
+}
+
+message Dog {
+    string name = 1;
+    int32 age = 2;
+}
+
+message Cat {
+    string name = 1;
+    string city = 2;
+}

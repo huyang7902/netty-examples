@@ -1,0 +1,2 @@
+编译命令（项目根目录）：
+protoc -I=src\main\resources\protobuf  --java_out=src\main\java  MyDataInfo.proto
